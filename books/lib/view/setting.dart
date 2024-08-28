@@ -20,7 +20,7 @@ class SettingPage extends StatelessWidget {
           // Background image
           Positioned.fill(
             child: Image.asset(
-              isDarkMode ? 'assets/black.png' : 'assets/old1.png',
+              isDarkMode ? 'assets/black.png' : 'assets/old.png',
               fit: BoxFit.cover,
             ),
           ),

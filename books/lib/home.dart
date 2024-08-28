@@ -1,22 +1,22 @@
-// ignore_for_file: public_member_api_docs, sort_constructors_first
-import 'package:books/helper/utils/drawer.dart';
 import 'package:books/model/list.dart';
-import 'package:books/view/about.dart';
+import 'package:flutter/material.dart';
 import 'package:books/view/category.dart';
 import 'package:books/view/setting.dart';
-import 'package:flutter/material.dart';
+import 'package:books/view/about.dart';
+import 'package:books/helper/utils/drawer.dart';
 
 class CodeOfCivilProcedureList extends StatefulWidget {
   final void Function() onToggleDarkMode;
   final bool isDarkMode;
 
   const CodeOfCivilProcedureList({
-    Key? key,
+    super.key,
     required this.onToggleDarkMode,
     required this.isDarkMode,
-  }) : super(key: key);
+  });
 
   @override
+  // ignore: library_private_types_in_public_api
   _CodeOfCivilProcedureListState createState() =>
       _CodeOfCivilProcedureListState();
 }
@@ -99,6 +99,7 @@ class _CodeOfCivilProcedureListState extends State<CodeOfCivilProcedureList>
     });
   }
 
+  // ignore: unused_element
   void _navigateToAboutUs() {
     Navigator.push(
       context,
@@ -146,6 +147,7 @@ class _CodeOfCivilProcedureListState extends State<CodeOfCivilProcedureList>
       drawer: DrewerScreen(
         isDarkMode: widget.isDarkMode,
         onToggleDarkMode: widget.onToggleDarkMode,
+        onLanguageSelected: _onLanguageSelected, // Pass the callback
       ),
       body: PageView(
         controller: _pageController,
@@ -163,96 +165,70 @@ class _CodeOfCivilProcedureListState extends State<CodeOfCivilProcedureList>
           SettingPage(
             isDarkMode: widget.isDarkMode,
             onToggleDarkMode: widget.onToggleDarkMode,
-            selectedLanguage: '',
+            selectedLanguage: _selectedLanguage, // Pass the selected language
           ),
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(
-        backgroundColor:
-            widget.isDarkMode ? Colors.black : const Color(0xFF8B4513),
         selectedItemColor: Colors.white,
         unselectedItemColor: Colors.grey,
-        currentIndex: _selectedIndex,
-        onTap: _onItemTapped,
-        items: [
+        backgroundColor:
+            widget.isDarkMode ? Colors.black : const Color(0xFF8B4513),
+        items: const [
           BottomNavigationBarItem(
-            icon: Transform.scale(
-              scale: _selectedIndex == 0 ? 1.3 : 1.0,
-              child: const Icon(Icons.home),
-            ),
+            icon: Icon(Icons.home),
             label: 'Home',
-            activeIcon: Transform.scale(
-              scale: 1.3,
-              child: const Icon(Icons.home, color: Colors.white),
-            ),
           ),
           BottomNavigationBarItem(
-            icon: Transform.scale(
-              scale: _selectedIndex == 1 ? 1.3 : 1.0,
-              child: const Icon(Icons.category),
-            ),
+            icon: Icon(Icons.category),
             label: 'Category',
-            activeIcon: Transform.scale(
-              scale: 1.3,
-              child: const Icon(Icons.category, color: Colors.white),
-            ),
           ),
           BottomNavigationBarItem(
-            icon: Transform.scale(
-              scale: _selectedIndex == 2 ? 1.3 : 1.0,
-              child: const Icon(Icons.settings),
-            ),
+            icon: Icon(Icons.settings),
             label: 'Settings',
-            activeIcon: Transform.scale(
-              scale: 1.3,
-              child: const Icon(Icons.settings, color: Colors.white),
-            ),
           ),
         ],
+        currentIndex: _selectedIndex,
+        onTap: _onItemTapped,
       ),
     );
   }
 
   Widget _buildHomePage() {
     return Stack(
+      fit: StackFit.expand,
       children: [
-        Positioned.fill(
-          child: Image.asset(
-            widget.isDarkMode ? 'assets/black.png' : 'assets/old1.png',
-            fit: BoxFit.cover,
-          ),
+        // Background image
+        Image.asset(
+          widget.isDarkMode
+              ? 'assets/black.png'
+              : 'assets/old.png', // Use different images based on dark mode
+          fit: BoxFit.cover,
         ),
+        // Content on top of the background
         ListView.separated(
           itemCount: _filteredSections.length,
           separatorBuilder: (context, index) => Divider(
-            color: widget.isDarkMode ? Colors.white30 : Colors.black26,
-            thickness: 1.0,
+            color: widget.isDarkMode
+                ? Colors.white70
+                : Colors.black26, // Change color based on dark mode
+            thickness: 1,
+            height: 20, // Adjust height for the gap between items
           ),
           itemBuilder: (context, index) {
-            return Container(
-              padding:
-                  const EdgeInsets.symmetric(vertical: 12.0, horizontal: 12.0),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    _filteredSections[index]['title']!,
-                    style: TextStyle(
-                      fontSize: 16.0,
-                      fontWeight: FontWeight.bold,
-                      color: widget.isDarkMode ? Colors.white : Colors.black,
-                    ),
-                  ),
-                  if (_filteredSections[index]['subtitle']!.isNotEmpty)
-                    Text(
-                      _filteredSections[index]['subtitle']!,
-                      style: TextStyle(
-                        fontSize: 14.0,
-                        color:
-                            widget.isDarkMode ? Colors.white70 : Colors.black87,
-                      ),
-                    ),
-                ],
+            final section = _filteredSections[index];
+            return ListTile(
+              title: Text(
+                section['title']!,
+                style: TextStyle(
+                    fontSize: 18,
+                    color: widget.isDarkMode ? Colors.white : Colors.black),
+              ),
+              subtitle: Text(
+                section['subtitle']!,
+                style: TextStyle(
+                    fontSize: 16,
+                    color: widget.isDarkMode ? Colors.white70 : Colors.black54),
               ),
             );
           },
