@@ -232,6 +232,8 @@ class HomeScreen extends StatelessWidget {
   final HomeController controller = Get.put(HomeController());
   final AppController appController = Get.find();
 
+  HomeScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -280,7 +282,7 @@ class HomeScreen extends StatelessWidget {
           padding: EdgeInsets.zero,
           children: [
             const DrawerHeader(
-              decoration: const BoxDecoration(
+              decoration: BoxDecoration(
                 color: Colors.orangeAccent,
               ),
               child: Column(
