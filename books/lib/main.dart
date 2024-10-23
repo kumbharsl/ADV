@@ -1,4 +1,6 @@
 // main.dart
+// ignore_for_file: library_private_types_in_public_api
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
@@ -153,6 +155,8 @@ class DetailController extends GetxController {
 class MyApp extends StatelessWidget {
   final appController = Get.put(AppController());
 
+  MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
@@ -163,7 +167,7 @@ class MyApp extends StatelessWidget {
       themeMode: ThemeMode.system,
       initialRoute: '/splash',
       getPages: [
-        GetPage(name: '/splash', page: () => SplashScreen()),
+        GetPage(name: '/splash', page: () => const SplashScreen()),
         GetPage(name: '/home', page: () => HomeScreen()),
         GetPage(name: '/detail', page: () => DetailScreen()),
       ],
@@ -173,6 +177,8 @@ class MyApp extends StatelessWidget {
 
 // Splash Screen
 class SplashScreen extends StatefulWidget {
+  const SplashScreen({super.key});
+
   @override
   _SplashScreenState createState() => _SplashScreenState();
 }
@@ -190,7 +196,7 @@ class _SplashScreenState extends State<SplashScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           gradient: LinearGradient(
             begin: Alignment.topCenter,
             end: Alignment.bottomCenter,
@@ -458,6 +464,8 @@ class HomeScreen extends StatelessWidget {
 // Detail Screen
 class DetailScreen extends StatelessWidget {
   final DetailController controller = Get.put(DetailController());
+
+  DetailScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
