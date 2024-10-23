@@ -267,14 +267,16 @@ class HomeScreen extends StatelessWidget {
               snackPosition: SnackPosition.BOTTOM,
             ),
           ),
-          Obx(() => IconButton(
-                icon: Icon(
-                  appController.isDarkMode.value
-                      ? Icons.light_mode
-                      : Icons.dark_mode,
-                ),
-                onPressed: appController.toggleTheme,
-              )),
+          Obx(
+            () => IconButton(
+              icon: Icon(
+                appController.isDarkMode.value
+                    ? Icons.light_mode
+                    : Icons.dark_mode,
+              ),
+              onPressed: appController.toggleTheme,
+            ),
+          ),
         ],
       ),
       drawer: Drawer(
