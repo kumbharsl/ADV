@@ -296,7 +296,7 @@ class HomeScreen extends StatelessWidget {
                     'Users',
                     style: TextStyle(
                       color: Colors.white,
-                      fontSize: 24,
+                      fontSize: 20,
                     ),
                   ),
                   Text(
