@@ -113,24 +113,24 @@ class HomeController extends GetxController {
       'id': 15,
       'title': 'Dnyaneshwari Chapter 15',
       'description':
-          'Purushottama Yoga – The Yoga of the Supreme Divine Personality'
+          'Purushottama Yoga - The Yoga of the Supreme Divine Personality'
     },
     {
       'id': 16,
       'title': 'Dnyaneshwari Chapter 16',
       'description':
-          'Daivasura Sampad Vibhaga Yoga – The Yoga of the Division between the Divine and the Demoniacal'
+          'Daivasura Sampad Vibhaga Yoga - The Yoga of the Division between the Divine and the Demoniacal'
     },
     {
       'id': 17,
       'title': 'Dnyaneshwari Chapter 17',
-      'description': 'Sraddhatraya Vibhaga Yoga – The Yoga of Threefold Faith'
+      'description': 'Sraddhatraya Vibhaga Yoga - The Yoga of Threefold Faith'
     },
     {
       'id': 18,
       'title': 'Dnyaneshwari Chapter 18',
       'description':
-          'Moksha Sanyasa Yoga – The Yoga of Liberation and Renunciation'
+          'Moksha Sanyasa Yoga - The Yoga of Liberation and Renunciation'
     },
   ].obs;
 
