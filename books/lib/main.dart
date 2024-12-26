@@ -42,72 +42,72 @@ class HomeController extends GetxController {
     {
       'id': 2,
       'title': 'Dnyaneshwari Chapter 2',
-      'description': 'Sankhya Yoga – Transcendental Knowledge'
+      'description': 'Sankhya Yoga - Transcendental Knowledge'
     },
     {
       'id': 3,
       'title': 'Dnyaneshwari Chapter 3',
-      'description': 'Karma Yoga – The Yoga of Action'
+      'description': 'Karma Yoga - The Yoga of Action'
     },
     {
       'id': 4,
       'title': 'Dnyaneshwari Chapter 4',
       'description':
-          'Jnana Karma Sanyasa Yoga – The Yoga of Knowledge and Renunciation of Action'
+          'Jnana Karma Sanyasa Yoga - The Yoga of Knowledge and Renunciation of Action'
     },
     {
       'id': 5,
       'title': 'Dnyaneshwari Chapter 5',
-      'description': 'Karma Sanyasa Yoga – The Yoga of Renunciation'
+      'description': 'Karma Sanyasa Yoga - The Yoga of Renunciation'
     },
     {
       'id': 6,
       'title': 'Dnyaneshwari Chapter 6',
-      'description': 'Dhyana Yoga – The Yoga of Meditation'
+      'description': 'Dhyana Yoga - The Yoga of Meditation'
     },
     {
       'id': 7,
       'title': 'Dnyaneshwari Chapter 7',
-      'description': 'Jnana Vijnana Yoga – The Yoga of Knowledge and Wisdom'
+      'description': 'Jnana Vijnana Yoga - The Yoga of Knowledge and Wisdom'
     },
     {
       'id': 8,
       'title': 'Dnyaneshwari Chapter 8',
-      'description': 'Aksara Brahma Yoga – The Yoga of the Imperishable Brahman'
+      'description': 'Aksara Brahma Yoga - The Yoga of the Imperishable Brahman'
     },
     {
       'id': 9,
       'title': 'Dnyaneshwari Chapter 9',
       'description':
-          'Raja Vidya Raja Guhya Yoga – The Yoga of Royal Knowledge and Royal Secret'
+          'Raja Vidya Raja Guhya Yoga - The Yoga of Royal Knowledge and Royal Secret'
     },
     {
       'id': 10,
       'title': 'Dnyaneshwari Chapter 10',
-      'description': 'Vibhuti Yoga – The Yoga of Divine Glories'
+      'description': 'Vibhuti Yoga - The Yoga of Divine Glories'
     },
     {
       'id': 11,
       'title': 'Dnyaneshwari Chapter 11',
       'description':
-          'Visvarupa Darsana Yoga – The Yoga of the Vision of the Universal Form'
+          'Visvarupa Darsana Yoga - The Yoga of the Vision of the Universal Form'
     },
     {
       'id': 12,
       'title': 'Dnyaneshwari Chapter 12',
-      'description': 'Bhakti Yoga – The Yoga of Devotion'
+      'description': 'Bhakti Yoga - The Yoga of Devotion'
     },
     {
       'id': 13,
       'title': 'Dnyaneshwari Chapter 13',
       'description':
-          'Kshetra Kshetragna Vibhaga Yoga – The Yoga of the Field and the Knower of the Field'
+          'Kshetra Kshetragna Vibhaga Yoga - The Yoga of the Field and the Knower of the Field'
     },
     {
       'id': 14,
       'title': 'Dnyaneshwari Chapter 14',
       'description':
-          'Gunatraya Vibhaga Yoga – The Yoga of the Division of the Three Gunas'
+          'Gunatraya Vibhaga Yoga - The Yoga of the Division of the Three Gunas'
     },
     {
       'id': 15,
